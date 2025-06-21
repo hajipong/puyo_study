@@ -1,0 +1,136 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.puyo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.puyo-field {
+  position: relative;
+  width: 241px;
+  height: 481px;
+  box-sizing: content-box;
+  margin-top: 16px;
+  overflow: hidden;
+  font-size: 0;
+}
+.puyo-board {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 241px;
+  height: 481px;
+  background: #222;
+  pointer-events: none;
+  font-size: 0;
+}
+.puyo-active-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 241px;
+  height: 481px;
+  pointer-events: none;
+  font-size: 0;
+}
+.puyo-row {
+  display: flex;
+  width: 100%;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  gap: 0;
+  column-gap: 0;
+  row-gap: 0;
+}
+.puyo-cell {
+  width: 100%;
+  height: 100%;
+  min-width: unset;
+  min-height: unset;
+  background: #444;
+  border-right: 1px solid #333;
+  border-bottom: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.puyo-row:first-child .puyo-cell {
+  border-top: 1px solid #333;
+}
+.puyo-cell:first-child {
+  border-left: 1px solid #333;
+}
+.puyo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px #0006;
+}
+.puyo-cell.red .puyo {
+  background: #e44;
+}
+.puyo-cell.green .puyo {
+  background: #4e4;
+}
+.puyo-cell.blue .puyo {
+  background: #44e;
+}
+.puyo-cell.yellow .puyo {
+  background: #ffeb3b;
+}
+.puyo-cell.highlight {
+  background: #ff0 !important;
+  box-shadow: 0 0 8px 4px #ff0a;
+}
+.puyo-floating {
+  border: none !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+}
